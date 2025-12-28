@@ -55,4 +55,4 @@ const handleChange=(e)=>{
   )
 }
 
-export default AdminDashbord
+export default AdminDashbord;
