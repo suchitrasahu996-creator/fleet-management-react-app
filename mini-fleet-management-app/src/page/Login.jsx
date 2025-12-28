@@ -1,8 +1,23 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
+import {useNavigate} from "react-router-dom";
 function Login(){
 const[email,setEmail]=useState("");
 const[password,setPassword]=useState("");
+const emailref=useRef();
+const navigate= useNavigate();
+useEffect(()=>{
+    emailref.current.focus();
+
+},[])
+const  handleLogin=()=>{
+    if (email==="admin@gmail.com" && password==="admin@1234"){
+        alert("login sucessfull");
+    
+    }else{
+        alert("wrong email or password")
+    }
+}
+
 
 
 return(
@@ -15,4 +30,5 @@ return(
     <button onClick={handleLogin}>Login</button>
     </div>
 )
-}
+};
+export default Login;
