@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 function AdminDashbord() {
-const [fleets]
+const [fleets,setFleets]=useState([]);
+const [Form,setForm]=useState({
+    RegNo:"",
+    category:"",
+    Driver:"",
+    Status:"Available",
+
+});
+const handleChange=(e)=>{
+    setForm ({Form,[e.target.name]:e.target.value });
+};
+
+
+
+
+    const addFleet=()=>{
+    if(!Form.RegNo || !Form.category || !Form.Driver){
+        alert ("All Fields are Required");
+        return;
+
+    }
+}
 
 
 
