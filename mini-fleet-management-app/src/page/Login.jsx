@@ -12,6 +12,8 @@ useEffect(()=>{
 const  handleLogin=()=>{
     if (email==="admin@gmail.com" && password==="admin@1234"){
         alert("login sucessfull");
+        setIsAuth(true);
+        navigate("/admin");
     
     }else{
         alert("wrong email or password")
