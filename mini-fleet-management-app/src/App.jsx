@@ -14,13 +14,14 @@ function App() {
         <Route path="/login" element={<ProctecdRoute isAuth={isAuth}>
           <AdminDashbord/>
         </ProctecdRoute>}/>
-        
+        <Route path="*" element={<Navigate t0="/login"/>}/>
+
       </Routes>
 
 
       </BrowserRouter>
     </div>
   )
-}
+};
 
-export default App
+export default App;
